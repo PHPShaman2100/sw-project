@@ -1,12 +1,13 @@
 {
-    "name": "phpshaman2100/sw-framwork",
-    "description": "Swoole Framwork",
+    "name": "phpshaman2100/sw-framwork-projec",
+    "description": "Swoole Project",
     "keywords": [
         "swoole",
         "framework"
     ],
     "type": "library",
     "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Serhii Yanchevskyi",
@@ -15,14 +16,24 @@
         }
     ],
     "require": {
-        "php": ">=8.2.0",
+        "php": ">=8.2",
         "ext-mbstring": "*",
         "ext-ctype": "*",
-        "lib-pcre": "*"
+        "lib-pcre": "*",
+        "phpshaman2100/sw-framwork": "*"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src"
         }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../framwork"
+        }
+    ],
+    "require-dev": {
+        "openswoole/ide-helper": "~4.8.1"
     }
 }
